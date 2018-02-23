@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <form action="/add" method="post">
+    <textarea id="entry" name="entry" cols="30" rows="10"></textarea>
+    <button type="submit">Submit</button>
+  </form>
+
+  <hr>
+
+	% if entries:
+		<ul>
+			% for entry in entries:
+				<li>{{ entry['text'] }}</li>
+			% end
+		</ul>
+	% end
+</body>
+</html>
